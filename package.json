@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+
   },
   "keywords": [
     "mern",
@@ -14,8 +17,11 @@
   "author": "Cherevko Alexey <cherevkoalexey1976@mail.ru>",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "config": "^3.3.3",
     "express": "^4.17.1",
+    "express-validator": "^6.8.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.7"
   },
   "devDependencies": {
